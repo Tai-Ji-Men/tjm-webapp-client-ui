@@ -38,3 +38,4 @@ The React app will run on http://localhost:3000
 ## Design Inspirations
 
 This website's design is based on the principles of Tai Ji Men Qigong, focusing on balance, harmony, and traditional Chinese aesthetics while maintaining a modern and responsive interface.
+# tjm-webapp-client
