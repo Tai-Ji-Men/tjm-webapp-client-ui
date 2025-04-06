@@ -1,0 +1,65 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.overlapping-sections {
+  position: relative;
+}
+
+.features-overlap-container {
+  position: relative;
+  z-index: 10;
+  margin-top: -180px;
+  margin-bottom: -150px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.orange-background-section {
+  background-color: #FF725E;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding-top: 150px;
+}
+
+/* 设置内容容器宽度 */
+.content-container {
+  width: 81.7%; /* 1176px/1440px */
+  max-width: 1176px;
+  margin: 0 auto;
+}
+
+/* Set larger base font size for better readability */
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .features-overlap-container {
+    margin-top: -120px;
+    margin-bottom: -100px;
+  }
+  
+  .content-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-overlap-container {
+    margin-top: -80px;
+    margin-bottom: -80px;
+  }
+  
+  .orange-background-section {
+    padding-top: 100px;
+  }
+} 

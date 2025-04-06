@@ -1,0 +1,62 @@
+.join-cta {
+  padding: 80px 0 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  width: 100%;
+}
+
+.join-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.join-cta-quote {
+  font-size: 3.5rem;
+  font-weight: normal;
+  color: #F8A78B;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.join-now-button {
+  margin-top: 50px;
+  padding: 15px 50px;
+  background-color: transparent;
+  color: #F8A78B;
+  border: 2px solid #F8A78B;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-now-button:hover {
+  background-color: #F8A78B;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .join-cta-quote {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .join-cta {
+    padding: 60px 20px 100px;
+  }
+  
+  .join-cta-quote {
+    font-size: 2.5rem;
+  }
+  
+  .join-now-button {
+    margin-top: 40px;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+  }
+} 

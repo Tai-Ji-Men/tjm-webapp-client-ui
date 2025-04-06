@@ -1,0 +1,49 @@
+.btn {
+  font-family: inherit;
+  font-weight: 400;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn--primary {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #fff;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn--transparent {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn--medium {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.btn--large {
+  padding: 14px 32px;
+  font-size: 18px;
+}
+
+.btn--primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.btn--outline:hover, 
+.btn--transparent:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: translateY(-3px);
+} 
