@@ -106,4 +106,36 @@
 
 .search-box input::placeholder {
   color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar--about {
+  background-color: transparent !important;
+}
+
+.navbar--about .nav-link,
+.navbar--about .navbar-logo,
+.navbar--about .search-box input,
+.navbar--about .search-icon {
+  color: #111 !important;
+  fill: #111 !important;
+}
+
+.navbar--about .nav-link.active {
+  color: #FF725E !important;
+}
+
+.navbar--about .search-box {
+  background-color: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.10);
+}
+
+.navbar--about .navbar-logo .title-image {
+  filter: brightness(0) invert(0);
+}
+
+.navbar--about .search-box input,
+.navbar--about .search-icon {
+  color: #111 !important;
+  fill: #111 !important;
+  filter: brightness(0) invert(0);
 } 
