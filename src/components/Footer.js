@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import tjmLogo from '../assets/tjm_logo (2).svg';
+import tjmLogo from '../assets/tjm_logo.svg';
 import tjmText from '../assets/Tai Ji Men Qigong (1).svg';
 
 const Footer = () => {
