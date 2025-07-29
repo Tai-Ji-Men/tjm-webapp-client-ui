@@ -2,4 +2,4 @@
 # Local Netlify folder
 .netlify
 .next/
-out/
+/out
