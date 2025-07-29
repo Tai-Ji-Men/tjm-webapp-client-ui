@@ -1,6 +1,5 @@
-import {useEffect, useState} from "react";
-
-const BASE = 'http://localhost:8080/tjm/api/v1';
+const DOMAIN = 'http://tjm-content-management-app-env-2-env.eba-p7hefipt.us-east-2.elasticbeanstalk.com';
+const BASE = `${DOMAIN}/tjm/api/v1`;
 
 export async function getPageContent(pageId) {
   const res = await fetch(`${BASE}/config?pageId=${pageId}`);
