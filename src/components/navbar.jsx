@@ -81,7 +81,7 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery }) 
       } ${
         isAtTop ? 'bg-transparent' : 'bg-white/80 backdrop-blur-md shadow-sm'
       }`} 
-      style={{position: 'fixed !important', top: 0, left: 0, width: '100%', height: '94px', zIndex: 50}}
+      style={{position: 'sticky', top: 0, left: 0, width: '100%', height: '94px', zIndex: 50, 'background-color': 'white'}}
     >
       <div className="w-full max-w-[1440px] mx-auto relative h-full">
         <div className="flex justify-between items-center px-4 lg:px-[60px]" style={{height: '94px'}}>
@@ -115,19 +115,22 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery }) 
             >
               Qigong & Life
             </button>
-            <button
-              onClick={() => handleNavClick("benefit-practice")}
-              className={getNavItemClass("benefit-practice")}
-            >
-              Benefits of Practice
-            </button>
 
-            <button
-              onClick={() => handleNavClick("news")}
-              className={getNavItemClass("news")}
-            >
-              News
-            </button>
+            {/*Hide two unfinished tabs for now. */}
+
+            {/*<button*/}
+            {/*  onClick={() => handleNavClick("benefit-practice")}*/}
+            {/*  className={getNavItemClass("benefit-practice")}*/}
+            {/*>*/}
+            {/*  Benefits of Practice*/}
+            {/*</button>*/}
+
+            {/*<button*/}
+            {/*  onClick={() => handleNavClick("news")}*/}
+            {/*  className={getNavItemClass("news")}*/}
+            {/*>*/}
+            {/*  News*/}
+            {/*</button>*/}
 
             {/* Join Us Nav Item with separate dropdown toggle */}
             <div className="relative inline-flex items-center space-x-1">
