@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* 防止額外滾動空間 */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  /* Define custom font families using system fonts */
+  .font-inter {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  }
+
+  .font-roboto {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  }
+
+  .font-sedan {
+    font-family: 'Sedan SC', Georgia, "Times New Roman", Times, serif;
+  }
+}
+
+@layer components {
+  /* RWD Container System - 符合用戶規範 */
+  .container-mobile {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .container-mobile {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  .container-desktop {
+    max-width: 1200px; /* 桌機標準寬度 */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    .container-desktop {
+      max-width: 1440px; /* 桌機最大寬度 */
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .container-desktop {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  .container-wide {
+    max-width: 1600px; /* 寬螢幕最大寬度 */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 1600px) {
+    .container-wide {
+      width: 80vw; /* 超寬螢幕使用 80vw */
+      max-width: 1800px;
+    }
+  }
+
+  /* 舊的容器類別保持向後兼容 */
+  .container-1180 {
+    max-width: 1200px; /* 更新為符合規範 */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    .container-1180 {
+      max-width: 1440px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  /* 響應式文字大小系統 */
+  .text-responsive-xs {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-xs {
+      font-size: 0.875rem; /* 14px */
+    }
+  }
+
+  .text-responsive-sm {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-sm {
+      font-size: 1rem; /* 16px */
+    }
+  }
+
+  .text-responsive-base {
+    font-size: 1rem; /* 16px */
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-base {
+      font-size: 1.125rem; /* 18px */
+    }
+  }
+
+  .text-responsive-lg {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-lg {
+      font-size: 1.25rem; /* 20px */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive-lg {
+      font-size: 1.5rem; /* 24px */
+    }
+  }
+
+  /* 響應式間距系統 */
+  .spacing-responsive-sm {
+    margin-bottom: 1rem; /* 16px */
+  }
+
+  @media (min-width: 768px) {
+    .spacing-responsive-sm {
+      margin-bottom: 1.5rem; /* 24px */
+    }
+  }
+
+  .spacing-responsive-md {
+    margin-bottom: 1.5rem; /* 24px */
+  }
+
+  @media (min-width: 768px) {
+    .spacing-responsive-md {
+      margin-bottom: 2rem; /* 32px */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .spacing-responsive-md {
+      margin-bottom: 3rem; /* 48px */
+    }
+  }
+}
