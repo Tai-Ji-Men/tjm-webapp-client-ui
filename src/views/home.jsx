@@ -1,6 +1,24 @@
 import { ChatbotWidget } from "./chatbot"
+import {getPageContent} from "@/lib/apiUtils";
+import {useEffect, useState} from "react";
 
 export default function Home() {
+
+  const [pageContent, setPageContent] = useState({ testimonials: [] });
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await getPageContent("home");
+        console.log("data: " + res);
+        setPageContent(res.data);
+      } catch (err) {
+        setError(err.message);
+      }
+    })();
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section - 改進響應式設計 */}
@@ -170,7 +188,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-white font-inter text-sm xs:text-base leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    11111Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
                     tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero
                     vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus
                     tristique posuere.
@@ -220,32 +238,7 @@ export default function Home() {
             {/* Testimonials - Horizontal Scroll */}
             <div className="overflow-x-auto pb-4">
               <div className="flex space-x-4 xs:space-x-6 md:space-x-8">
-                {[
-                  {
-                    name: "Sunny",
-                    title: "Former CMO of Tech Inc.",
-                    image: "/images/content/sunny.png",
-                    textColor: "text-white",
-                  },
-                  {
-                    name: "Henry",
-                    title: "Engineer",
-                    image: "/images/content/henry.png",
-                    textColor: "text-white",
-                  },
-                  {
-                    name: "Connie",
-                    title: "Business School Professor",
-                    image: "/images/content/connie.png",
-                    textColor: "text-black",
-                  },
-                  {
-                    name: "David",
-                    title: "Software Developer",
-                    image: "/images/content/david.png",
-                    textColor: "text-white",
-                  },
-                ].map((testimonial, index) => (
+                {pageContent.testimonials.map((testimonial, index) => (
                   <div key={index} className="relative min-w-[200px] xs:min-w-[260px] md:min-w-[320px] lg:min-w-[403px] h-48 xs:h-64 md:h-80 lg:h-[495px] rounded-xl xs:rounded-2xl md:rounded-3xl overflow-hidden group">
                     <img
                       src={testimonial.image || "/placeholder.svg"}
@@ -259,6 +252,7 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
+
               </div>
             </div>
           </div>

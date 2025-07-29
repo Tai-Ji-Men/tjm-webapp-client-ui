@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import ContactPopup from "@/layout/contactprop"
+import ContactPopup from "@/components/contactprop"
 
 export default function Footer() {
   const [popupOpen, setPopupOpen] = useState(false)

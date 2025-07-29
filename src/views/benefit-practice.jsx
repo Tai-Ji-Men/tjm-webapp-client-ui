@@ -1,4 +1,24 @@
+import {useEffect, useState} from "react";
+import FeatureCard from "@/components/featureCard";
+import {getPageContent} from "@/lib/apiUtils";
+
 export default function BenefitPractice() {
+
+  const [pageContent, setPageContent] = useState({ features: [] });
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await getPageContent("benefitPractice");
+        console.log("data: " + res);
+        setPageContent(res.data);
+      } catch (err) {
+        setError(err.message);
+      }
+    })();
+  }, []);
+
   return (
     <div className="bg-white">
       {/* Hero Section with Background */}
@@ -24,7 +44,7 @@ export default function BenefitPractice() {
                 <div className="flex items-center mb-3 xs:mb-4">
                   <div className="w-8 xs:w-10 md:w-16 lg:w-[72px] h-0.5 bg-black mr-2 xs:mr-3 md:mr-4"></div>
                   <span className="font-['Sedan_SC'] text-[10px] xs:text-xs sm:text-sm md:text-base tracking-[1px] xs:tracking-[1.5px] sm:tracking-[2px] uppercase text-black">
-                    BENEFITS OF PRACTICES
+                    BENEFITS OF PRACTICESss
                   </span>
                 </div>
               </div>
@@ -98,107 +118,18 @@ export default function BenefitPractice() {
       {/* Benefits Grid */}
       <section className="pb-12 xs:pb-16 md:pb-20 lg:pb-24">
         <div className="container-desktop">
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-6 md:gap-8">
-            {/* 1) Health Recovery */}
-            <div className="relative h-[250px] xs:h-[300px] md:h-[350px] lg:h-[421px] rounded-[16px] xs:rounded-[20px] overflow-hidden group">
-              <img
-                src="/images/content/bop1.jpg"
-                alt="Health Recovery"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[#0B0706]/30"></div>
-
-              <div className="absolute inset-0 p-4 xs:p-6 md:p-8 lg:p-12 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] leading-[150%] font-bold text-white mb-2 xs:mb-3 md:mb-4 font-roboto">
-                    1) Health Recovery
-                  </h3>
-                  <p className="text-white text-[10px] xs:text-xs sm:text-sm md:text-base leading-[160%] font-roboto max-w-[445px]">
-                    Experience natural healing and renewed vitality through gentle qigong movements and breathing techniques.
-                  </p>
-                </div>
-
-                <button className="self-start flex items-center justify-center px-4 xs:px-6 sm:px-8 py-2 xs:py-3 sm:py-4 bg-white backdrop-blur-[40px] text-[#1D2130] font-medium text-xs xs:text-sm sm:text-base leading-[19px] rounded transition w-[100px] xs:w-[120px] sm:w-[146px] h-[36px] xs:h-[42px] sm:h-[51px] font-roboto">
-                  Learn more
-                </button>
-              </div>
-            </div>
-
-            {/* 2) Youth & Kids */}
-            <div className="relative h-[250px] xs:h-[300px] md:h-[350px] lg:h-[421px] rounded-[16px] xs:rounded-[20px] overflow-hidden group">
-              <img
-                src="/images/content/bop2.jpg"
-                alt="Youth & Kids"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[#0B0706]/30"></div>
-
-              <div className="absolute inset-0 p-4 xs:p-6 md:p-8 lg:p-12 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] leading-[150%] font-bold text-white mb-2 xs:mb-3 md:mb-4 font-roboto">
-                    2) Youth & Kids
-                  </h3>
-                  <p className="text-white text-[10px] xs:text-xs sm:text-sm md:text-base leading-[160%] font-roboto max-w-[445px]">
-                    Build emotional resilience and focus in children through fun, age-appropriate qigong practices.
-                  </p>
-                </div>
-
-                <button className="self-start flex items-center justify-center px-4 xs:px-6 sm:px-8 py-2 xs:py-3 sm:py-4 bg-white backdrop-blur-[40px] text-[#1D2130] font-medium text-xs xs:text-sm sm:text-base leading-[19px] rounded transition w-[100px] xs:w-[120px] sm:w-[146px] h-[36px] xs:h-[42px] sm:h-[51px] font-roboto">
-                  Learn more
-                </button>
-              </div>
-            </div>
-
-            {/* 3) Stress Management */}
-            <div className="relative h-[250px] xs:h-[300px] md:h-[350px] lg:h-[421px] rounded-[16px] xs:rounded-[20px] overflow-hidden group">
-              <img
-                src="/images/content/bop3.jpg"
-                alt="Stress Management"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[#0B0706]/30"></div>
-
-              <div className="absolute inset-0 p-4 xs:p-6 md:p-8 lg:p-12 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] leading-[150%] font-bold text-white mb-2 xs:mb-3 md:mb-4 font-roboto">
-                    3) Stress Management
-                  </h3>
-                  <p className="text-white text-[10px] xs:text-xs sm:text-sm md:text-base leading-[160%] font-roboto max-w-[445px]">
-                    Find inner calm and mental clarity to navigate life's challenges with grace and wisdom.
-                  </p>
-                </div>
-
-                <button className="self-start flex items-center justify-center px-4 xs:px-6 sm:px-8 py-2 xs:py-3 sm:py-4 bg-white backdrop-blur-[40px] text-[#1D2130] font-medium text-xs xs:text-sm sm:text-base leading-[19px] rounded transition w-[100px] xs:w-[120px] sm:w-[146px] h-[36px] xs:h-[42px] sm:h-[51px] font-roboto">
-                  Learn more
-                </button>
-              </div>
-            </div>
-
-            {/* 4) Spiritual Elevation */}
-            <div className="relative h-[250px] xs:h-[300px] md:h-[350px] lg:h-[421px] rounded-[16px] xs:rounded-[20px] overflow-hidden group">
-              <img
-                src="/images/content/bop3.jpg"
-                alt="Spiritual Elevation"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[#0B0706]/30"></div>
-
-              <div className="absolute inset-0 p-4 xs:p-6 md:p-8 lg:p-12 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] leading-[150%] font-bold text-white mb-2 xs:mb-3 md:mb-4 font-roboto">
-                    4) Spiritual Elevation
-                  </h3>
-                  <p className="text-white text-[10px] xs:text-xs sm:text-sm md:text-base leading-[160%] font-roboto max-w-[445px]">
-                    Deepen your connection to inner peace and discover your true potential through spiritual cultivation.
-                  </p>
-                </div>
-
-                <button className="self-start flex items-center justify-center px-4 xs:px-6 sm:px-8 py-2 xs:py-3 sm:py-4 bg-white backdrop-blur-[40px] text-[#1D2130] font-medium text-xs xs:text-sm sm:text-base leading-[19px] rounded transition w-[100px] xs:w-[120px] sm:w-[146px] h-[36px] xs:h-[42px] sm:h-[51px] font-roboto">
-                  Learn more
-                </button>
-              </div>
-            </div>
+            {pageContent.features.map(feature => (
+                <FeatureCard
+                    key={feature.id}
+                    title={feature.title}
+                    image={feature.image}
+                    description={feature.description}
+                />
+            ))}
           </div>
+
         </div>
       </section>
 

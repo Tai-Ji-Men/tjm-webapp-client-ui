@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import Navbar from "@/components/layout/navbar"
-import Footer from "@/components/layout/footer"
-import RWDHelper from "@/components/layout/rwd-helper"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
+import RWDHelper from "@/components/rwd-helper"
 import Home from "@/views/home"
 import About from "@/views/about"
 import QigongLife from "@/views/qigong-life"

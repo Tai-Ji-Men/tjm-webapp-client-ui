@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import ContactPopup from "@/layout/contactprop"
+import ContactPopup from "@/components/contactprop"
 import { MapPin } from "lucide-react"
 
 export default function JoinUsPage() {

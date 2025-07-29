@@ -57,7 +57,7 @@ export default function About() {
                 {/* Right Column - Description */}
                 <div className="lg:pt-2 xl:pt-2 lg:ml-2 xl:ml-2 px-4 xs:px-0">
                   <p className="text-xs xs:text-sm md:text-base leading-relaxed text-[#525560]">
-                    Tai Ji Men is an ancient menpai (similar to school) of qigong, martial arts and self-cultivation. The culture
+                    TTTTTTTai Ji Men is an ancient menpai (similar to school) of qigong, martial arts and self-cultivation. The culture
                     of Tai Ji Men is deeply rooted in Tao wisdom, inheriting one of the highest philosophies of mankind, which has
                     been passed down and practiced in a cloistered tradition since ancient times.
                   </p>

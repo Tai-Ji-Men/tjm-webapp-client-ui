@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 
-const BASE = '/api/content';
+const BASE = 'http://localhost:8080/tjm/api/v1';
 
 export async function getPageContent(pageId) {
-  const res = await fetch(`${BASE}/${pageId}`);
+  const res = await fetch(`${BASE}/config?pageId=${pageId}`);
   if (!res.ok) {
     throw new Error(`Failed to load content for "${pageId}"`);
   }
