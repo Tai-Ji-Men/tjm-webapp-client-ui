@@ -10,6 +10,14 @@ export async function getPageContent(pageId) {
   return res.json();
 }
 
+export async function getEvents() {
+  const events = await fetch(`${BASE}/events`);
+  if (!events.ok) {
+    throw new Error('Failed to load content from getEvents()');
+  }
+  return events.json();
+}
+
 // http://localhost:8080/tjm/api/v1/test
 
 export async function getPageContentTest(pageId) {
@@ -20,7 +28,6 @@ export async function getPageContentTest(pageId) {
   }
   return res.json();
 }
-
 
 /**
  * Fetch the recommendations/testimonials JSON.

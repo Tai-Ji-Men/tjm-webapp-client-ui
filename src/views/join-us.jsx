@@ -1,15 +1,59 @@
 "use client"
 
-import { useState } from "react"
+import {useEffect, useState} from "react"
 import Image from "next/image"
 import ContactPopup from "@/components/contactprop"
 import { MapPin } from "lucide-react"
+import EventCard from "@/components/EventCard";
+import {getEvents, getPageContent} from "@/lib/apiUtils";
 
 export default function JoinUsPage() {
   const [popupOpen, setPopupOpen] = useState(false)
 
   const handleOpenPopup = () => setPopupOpen(true)
   const handleClosePopup = () => setPopupOpen(false)
+
+  const [events, setEvents] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await getEvents();
+        console.log("data: " + res);
+        setEvents(res);
+      } catch (err) {
+        setError(err.message);
+      }
+    })();
+  }, []);
+
+  // const eventsData = [
+  //   {
+  //     id: 28,
+  //     month: "JUN",
+  //     title: "A day with our wonderful children",
+  //     link: "/events/28-jun",       // or whatever URL you need
+  //   },
+  //   {
+  //     id: 7,
+  //     month: "JUL",
+  //     title: "A day with our wonderful children",
+  //     link: "/events/7-jul",
+  //   },
+  //   {
+  //     id: 3,
+  //     month: "AUG",
+  //     title: "A day with our wonderful children",
+  //     link: "/events/3-aug",
+  //   },
+  //   {
+  //     id: 19,
+  //     month: "SEP",
+  //     title: "Seminar: Caring for children with autism",
+  //     link: "/events/19-sep",
+  //   },
+  // ];
 
   return (
     <div className="relative w-full min-h-screen bg-white">
@@ -183,6 +227,8 @@ export default function JoinUsPage() {
 
       {/* Events Section */}
       <section className="relative pt-12 xs:pt-16 md:pt-20 lg:pt-[120px] pb-0 bg-white">
+
+
         <div className="container-desktop">
           {/* Section Header */}
           <div className="mb-12 xs:mb-16 md:mb-20 lg:mb-[80px]">
@@ -202,86 +248,13 @@ export default function JoinUsPage() {
 
           {/* Event Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-6">
-            {/* Event 1 */}
-            <div className="bg-[#FF725E] rounded-[15px] xs:rounded-[20px] p-4 xs:p-6 md:p-8 text-white">
-              <div className="flex items-start gap-3 xs:gap-4 md:gap-6">
-                <div className="text-center min-w-[40px] xs:min-w-[50px] md:min-w-[60px]">
-                  <div className="text-2xl xs:text-3xl md:text-[48px] font-medium leading-none mb-1">28</div>
-                  <div className="text-xs xs:text-sm md:text-[16px] uppercase tracking-wider font-medium">JUN</div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 xs:gap-3 mb-3 xs:mb-4">
-                    <span className="text-xs xs:text-sm md:text-[16px] uppercase tracking-wider font-medium">NEXT EVENTS</span>
-                    <div className="w-6 xs:w-8 md:w-[44px] h-[1.5px] xs:h-[2px] bg-white"></div>
-                  </div>
-                  <h3 className="text-sm xs:text-base md:text-lg lg:text-[28px] font-bold leading-tight">A day with our wonderful children</h3>
-                </div>
-                <button className="bg-white text-[#FF725E] w-10 xs:w-12 md:w-[56px] h-10 xs:h-12 md:h-[56px] rounded-[12px] xs:rounded-[15px] md:rounded-[20px] flex items-center justify-center flex-shrink-0">
-                  <span className="text-sm xs:text-base md:text-xl">→</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Event 2 */}
-            <div className="bg-[#FF725E] rounded-[15px] xs:rounded-[20px] p-4 xs:p-6 md:p-8 text-white">
-              <div className="flex items-start gap-3 xs:gap-4 md:gap-6">
-                <div className="text-center min-w-[40px] xs:min-w-[50px] md:min-w-[60px]">
-                  <div className="text-2xl xs:text-3xl md:text-[48px] font-medium leading-none mb-1">7</div>
-                  <div className="text-xs xs:text-sm md:text-[16px] uppercase tracking-wider font-medium">JUL</div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 xs:gap-3 mb-3 xs:mb-4">
-                    <span className="text-xs xs:text-sm md:text-[16px] uppercase tracking-wider font-medium">NEXT EVENTS</span>
-                    <div className="w-6 xs:w-8 md:w-[44px] h-[1.5px] xs:h-[2px] bg-white"></div>
-                  </div>
-                  <h3 className="text-sm xs:text-base md:text-lg lg:text-[28px] font-bold leading-tight">A day with our wonderful children</h3>
-                </div>
-                <button className="bg-white text-[#FF725E] w-10 xs:w-12 md:w-[56px] h-10 xs:h-12 md:h-[56px] rounded-[12px] xs:rounded-[15px] md:rounded-[20px] flex items-center justify-center flex-shrink-0">
-                  <span className="text-sm xs:text-base md:text-xl">→</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Event 3 */}
-            <div className="bg-[#FF725E] rounded-[15px] xs:rounded-[20px] p-4 xs:p-6 md:p-8 text-white">
-              <div className="flex items-start gap-3 xs:gap-4 md:gap-6">
-                <div className="text-center min-w-[40px] xs:min-w-[50px] md:min-w-[60px]">
-                  <div className="text-2xl xs:text-3xl md:text-[48px] font-medium leading-none mb-1">3</div>
-                  <div className="text-xs xs:text-sm md:text-[16px] uppercase tracking-wider font-medium">AUG</div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 xs:gap-3 mb-3 xs:mb-4">
-                    <span className="text-xs xs:text-sm md:text-[16px] uppercase tracking-wider font-medium">NEXT EVENTS</span>
-                    <div className="w-6 xs:w-8 md:w-[44px] h-[1.5px] xs:h-[2px] bg-white"></div>
-                  </div>
-                  <h3 className="text-sm xs:text-base md:text-lg lg:text-[28px] font-bold leading-tight">A day with our wonderful children</h3>
-                </div>
-                <button className="bg-white text-[#FF725E] w-10 xs:w-12 md:w-[56px] h-10 xs:h-12 md:h-[56px] rounded-[12px] xs:rounded-[15px] md:rounded-[20px] flex items-center justify-center flex-shrink-0">
-                  <span className="text-sm xs:text-base md:text-xl">→</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Event 4 */}
-            <div className="bg-[#FF725E] rounded-[15px] xs:rounded-[20px] p-4 xs:p-6 md:p-8 text-white">
-              <div className="flex items-start gap-3 xs:gap-4 md:gap-6">
-                <div className="text-center min-w-[40px] xs:min-w-[50px] md:min-w-[60px]">
-                  <div className="text-2xl xs:text-3xl md:text-[48px] font-medium leading-none mb-1">19</div>
-                  <div className="text-xs xs:text-sm md:text-[16px] uppercase tracking-wider font-medium">SEP</div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 xs:gap-3 mb-3 xs:mb-4">
-                    <span className="text-xs xs:text-sm md:text-[16px] uppercase tracking-wider font-medium">NEXT EVENTS</span>
-                    <div className="w-6 xs:w-8 md:w-[44px] h-[1.5px] xs:h-[2px] bg-white"></div>
-                  </div>
-                  <h3 className="text-sm xs:text-base md:text-lg lg:text-[28px] font-bold leading-tight">Seminar: Caring for children with autism</h3>
-                </div>
-                <button className="bg-white text-[#FF725E] w-10 xs:w-12 md:w-[56px] h-10 xs:h-12 md:h-[56px] rounded-[12px] xs:rounded-[15px] md:rounded-[20px] flex items-center justify-center flex-shrink-0">
-                  <span className="text-sm xs:text-base md:text-xl">→</span>
-                </button>
-              </div>
-            </div>
+            {events.map(evt => (
+                <EventCard key={evt.eventDateOfMonth} {...evt} />
+            ))}
           </div>
+
+
+
         </div>
 
         {/* Background image under Event cards - responsive full width */}
