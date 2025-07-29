@@ -26,7 +26,7 @@ export default function Home() {
               {/* Tagline */}
               <div className="w-full max-w-[347px] h-auto flex items-center justify-center mb-3 md:mb-4 rounded px-4">
                 <span className="text-black text-sm xs:text-base md:text-lg lg:text-xl font-medium font-sedan leading-relaxed">
-                  The Wisdom of Yin & Yang
+                  The Wisdom of Yin & Yang TEST
                 </span>
               </div>
 
