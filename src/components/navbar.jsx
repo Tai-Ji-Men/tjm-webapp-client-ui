@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import SearchComponent from "./search.js"
 
-export default function Navbar({ currentPage, setCurrentPage, setSearchQuery }) {
+export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, handleNavigate }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
@@ -49,9 +49,15 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery }) 
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  const handleNavClick = (page) => {
+  const handleNavClick = (page, sectionId) => {
     console.log("Navigating to:", page)
-    setCurrentPage(page)
+    if (typeof setCurrentPage === "function") {
+      // fallback (old way)
+      setCurrentPage(page)
+    }
+    if (typeof handleNavigate === "function") {
+      handleNavigate(page, sectionId);
+    }
     setIsDropdownOpen(false)
     setIsMobileMenuOpen(false)
   }
@@ -158,31 +164,22 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery }) 
                 </svg>
               </button>
 
-              {/* Submenu */}
-              {/*{isDropdownOpen && (
+               {/*Submenu */}
+              {isDropdownOpen && (
                 <div className="absolute top-full right-0 mt-1 min-w-max z-10 bg-white shadow-lg border border-gray-200 rounded-md py-1">
                   <ul role="menu" aria-label="Join Us submenu">
                     <li>
                       <button
-                        onClick={() => handleNavClick("academy")}
+                        onClick={() => handleNavClick("join-us", "academySection")}
                         role="menuitem"
                         className={`block w-full text-left px-4 py-2 text-sm whitespace-nowrap ${currentPage === "academy" ? "text-[#FF725E]" : "text-gray-700 hover:text-[#FF725E]"}`}
                       >
                         Academy
                       </button>
                     </li>
-                    <li>
-                      <button
-                        onClick={() => handleNavClick("events")}
-                        role="menuitem"
-                        className={`block w-full text-left px-4 py-2 text-sm whitespace-nowrap ${currentPage === "events" ? "text-[#FF725E]" : "text-gray-700 hover:text-[#FF725E]"}`}
-                      >
-                        Events
-                      </button>
-                    </li>
                   </ul>
                 </div>
-              )}*/}
+              )}
             </div>
           </div>
 

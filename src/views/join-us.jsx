@@ -28,33 +28,6 @@ export default function JoinUsPage() {
     })();
   }, []);
 
-  // const eventsData = [
-  //   {
-  //     id: 28,
-  //     month: "JUN",
-  //     title: "A day with our wonderful children",
-  //     link: "/events/28-jun",       // or whatever URL you need
-  //   },
-  //   {
-  //     id: 7,
-  //     month: "JUL",
-  //     title: "A day with our wonderful children",
-  //     link: "/events/7-jul",
-  //   },
-  //   {
-  //     id: 3,
-  //     month: "AUG",
-  //     title: "A day with our wonderful children",
-  //     link: "/events/3-aug",
-  //   },
-  //   {
-  //     id: 19,
-  //     month: "SEP",
-  //     title: "Seminar: Caring for children with autism",
-  //     link: "/events/19-sep",
-  //   },
-  // ];
-
   return (
     <div className="relative w-full min-h-screen bg-white">
       {/* Header removed: global Navbar will be rendered outside */}
@@ -116,7 +89,7 @@ export default function JoinUsPage() {
       </section>
 
       {/* Academies Section */}
-      <section className="relative py-12 xs:py-16 md:py-20 lg:py-[120px] bg-white">
+      <section id='academySection' className="relative py-12 xs:py-16 md:py-20 lg:py-[120px] bg-white">
         <div className="container-desktop">
           {/* Section Header */}
           <div className="mb-12 xs:mb-16 md:mb-20 lg:mb-[80px]">
@@ -203,31 +176,12 @@ export default function JoinUsPage() {
               </div>
             </div>
 
-            {/* Toronto */}
-            <div className="relative w-full h-[280px] xs:h-[320px] md:h-[380px] lg:h-[421px] rounded-[15px] xs:rounded-[20px] overflow-hidden group">
-              <Image src="/images/icons/toronto.png" alt="Toronto Academy" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition" />
-              <div className="absolute bottom-4 xs:bottom-6 left-4 xs:left-6 right-4 xs:right-6 text-white opacity-0 group-hover:opacity-100 transition">
-                <h3 className="text-lg xs:text-xl md:text-2xl lg:text-[28px] font-bold mb-2">Toronto</h3>
-                <div className="flex items-center gap-2 mb-3 xs:mb-4">
-                  <MapPin className="w-4 xs:w-5 h-4 xs:h-5" />
-                  <span className="text-sm xs:text-base md:text-lg lg:text-[20px] font-bold">ON, Canada</span>
-                </div>
-                <button onClick={handleOpenPopup} className="bg-white text-black px-4 xs:px-6 md:px-8 py-2 xs:py-3 rounded text-xs xs:text-sm md:text-[16px] font-medium">Contact Us</button>
-              </div>
-            </div>
-
-            {/* Coming Soon */}
-            <div className="relative w-full h-[280px] xs:h-[320px] md:h-[380px] lg:h-[421px] rounded-[15px] xs:rounded-[20px] bg-[#FF725E] flex flex-col justify-center items-center p-6 xs:p-8 text-white text-center">
-              <h3 className="text-lg xs:text-xl md:text-2xl lg:text-[28px] font-bold mb-4">Coming Soon!</h3>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Events Section */}
       <section className="relative pt-12 xs:pt-16 md:pt-20 lg:pt-[120px] pb-0 bg-white">
-
 
         <div className="container-desktop">
           {/* Section Header */}

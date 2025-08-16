@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import {useEffect, useState} from "react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import RWDHelper from "@/components/rwd-helper"
 import Home from "@/views/home"
 import About from "@/views/about"
 import QigongLife from "@/views/qigong-life"
@@ -16,7 +15,23 @@ import Events from "@/views/events"
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home")
-  const [searchQuery, setSearchQuery] = useState("")
+  const [searchQuery, setSearchQuery] = useState("");
+  const [pendingAnchor, setPendingAnchor] = useState(null);
+
+  const handleNavigate = (page, anchorId) => {
+    setCurrentPage(page);
+    setPendingAnchor(anchorId ?? null);
+  }
+
+  useEffect(() => {
+    if (pendingAnchor) {
+      const el = document.getElementById(pendingAnchor)
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" })
+        setPendingAnchor(null)
+      }
+    }
+  }, [currentPage, pendingAnchor])
 
   const renderPage = () => {
     switch (currentPage) {
@@ -49,6 +64,7 @@ export default function App() {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         setSearchQuery={setSearchQuery}
+        handleNavigate={handleNavigate}
       />
 
       <main className="flex-1">
