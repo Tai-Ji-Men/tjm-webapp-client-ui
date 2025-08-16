@@ -180,46 +180,46 @@ export default function JoinUsPage() {
         </div>
       </section>
 
+      {/*Events section might be added in the following milestones*/}
       {/* Events Section */}
-      <section className="relative pt-12 xs:pt-16 md:pt-20 lg:pt-[120px] pb-0 bg-white">
+      {/*<section className="relative pt-12 xs:pt-16 md:pt-20 lg:pt-[120px] pb-0 bg-white">*/}
 
-        <div className="container-desktop">
-          {/* Section Header */}
-          <div className="mb-12 xs:mb-16 md:mb-20 lg:mb-[80px]">
-            <div className="flex items-center gap-3 xs:gap-4 mb-6 xs:mb-8">
-              <div className="w-8 xs:w-12 md:w-[60px] h-[1.5px] xs:h-[2px] bg-black"></div>
-              <span className="text-xs xs:text-sm md:text-[14px] font-medium tracking-[0.15em] xs:tracking-[0.2em] uppercase text-black">EVENTS</span>
-            </div>
-            <div>
-              <h2 className="pl-8 xs:pl-12 md:pl-16 lg:pl-20 xl:pl-[88px] text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-black leading-[1.2] mb-4 xs:mb-6">Join the Journey. Make a Difference.</h2>
-              <p className="pl-8 xs:pl-12 md:pl-16 lg:pl-20 xl:pl-[88px] text-xs xs:text-sm md:text-[16px] text-black leading-[1.6] max-w-none lg:max-w-2xl">
-                Tai Ji Men's events are more than gatherings—they're heart-centered opportunities to uplift yourself and
-                the world around you. From local community wellness sharings to international cultural festivals, your
-                participation helps spread healing, harmony, and hope.
-              </p>
-            </div>
-          </div>
+      {/*  <div className="container-desktop">*/}
+      {/*    /!* Section Header *!/*/}
+      {/*    <div className="mb-12 xs:mb-16 md:mb-20 lg:mb-[80px]">*/}
+      {/*      <div className="flex items-center gap-3 xs:gap-4 mb-6 xs:mb-8">*/}
+      {/*        <div className="w-8 xs:w-12 md:w-[60px] h-[1.5px] xs:h-[2px] bg-black"></div>*/}
+      {/*        <span className="text-xs xs:text-sm md:text-[14px] font-medium tracking-[0.15em] xs:tracking-[0.2em] uppercase text-black">EVENTS</span>*/}
+      {/*      </div>*/}
+      {/*      <div>*/}
+      {/*        <h2 className="pl-8 xs:pl-12 md:pl-16 lg:pl-20 xl:pl-[88px] text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-black leading-[1.2] mb-4 xs:mb-6">Join the Journey. Make a Difference.</h2>*/}
+      {/*        <p className="pl-8 xs:pl-12 md:pl-16 lg:pl-20 xl:pl-[88px] text-xs xs:text-sm md:text-[16px] text-black leading-[1.6] max-w-none lg:max-w-2xl">*/}
+      {/*          Tai Ji Men's events are more than gatherings—they're heart-centered opportunities to uplift yourself and*/}
+      {/*          the world around you. From local community wellness sharings to international cultural festivals, your*/}
+      {/*          participation helps spread healing, harmony, and hope.*/}
+      {/*        </p>*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
 
-          {/* Event Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-6">
-            {events.map(evt => (
-                <EventCard key={evt.eventDateOfMonth} {...evt} />
-            ))}
-          </div>
+      {/*    /!* Event Cards *!/*/}
+      {/*    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xs:gap-6">*/}
+      {/*      {events.map(evt => (*/}
+      {/*          <EventCard key={evt.eventDateOfMonth} {...evt} />*/}
+      {/*      ))}*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+
+      {/*  /!* Background image under Event cards - responsive full width *!/*/}
+      {/*  <div className="relative w-full mt-8 xs:mt-12 overflow-hidden">*/}
+      {/*    <img*/}
+      {/*      src="/images/content/joinus6.png"*/}
+      {/*      alt="Join Us Performance"*/}
+      {/*      className="w-full h-[200px] xs:h-[300px] md:h-[400px] lg:h-auto object-cover"*/}
+      {/*    />*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
 
-
-        </div>
-
-        {/* Background image under Event cards - responsive full width */}
-        <div className="relative w-full mt-8 xs:mt-12 overflow-hidden">
-          <img
-            src="/images/content/joinus6.png"
-            alt="Join Us Performance"
-            className="w-full h-[200px] xs:h-[300px] md:h-[400px] lg:h-auto object-cover"
-          />
-        </div>
-      </section>
 
       {popupOpen && <ContactPopup isOpen={popupOpen} onClose={handleClosePopup} />}
     </div>
