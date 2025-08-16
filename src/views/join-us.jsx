@@ -97,22 +97,6 @@ export default function JoinUsPage() {
               <div className="w-8 xs:w-12 md:w-[60px] h-[1.5px] xs:h-[2px] bg-black"></div>
               <span className="text-xs xs:text-sm md:text-[14px] font-medium tracking-[0.15em] xs:tracking-[0.2em] uppercase text-black">ACADEMIES</span>
             </div>
-            <div>
-              <h2 className="pl-8 xs:pl-12 md:pl-16 lg:pl-20 xl:pl-[88px] text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-black leading-[1.2] mb-4 xs:mb-6">
-                A Welcoming Home for <br/>Growth and Transformation
-              </h2>
-              <p className="pl-8 xs:pl-12 md:pl-16 lg:pl-20 xl:pl-[88px] text-xs xs:text-sm md:text-[16px] text-black leading-[1.6] max-w-none lg:max-w-[1032px]">
-                Across the U.S. and Canada, Tai Ji Men Academies provide a peaceful sanctuary to explore the ancient
-                wisdom of Qigong and self-cultivation. Each academy offers tailored programs to improve physical health,
-                mental clarity, and spiritual growth—no matter your age or background. <br />
-                <br />
-                More than just a place to learn, each Tai Ji Men Academy is like a second home, where people of all ages come together as one big family.
-                Through gentle Qigong practices and heart-to-heart guidance, you'll find healing, joy, and lifelong
-                friendships on a shared journey of balance and self-discovery. <br />
-                <br />
-                Come visit your local academy and feel the warmth for yourself →
-              </p>
-            </div>
           </div>
 
           {/* Academy Cards */}
