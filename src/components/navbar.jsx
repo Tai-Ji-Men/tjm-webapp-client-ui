@@ -131,12 +131,12 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
             {/*  Benefits of Practice*/}
             {/*</button>*/}
 
-            {/*<button*/}
-            {/*  onClick={() => handleNavClick("news")}*/}
-            {/*  className={getNavItemClass("news")}*/}
-            {/*>*/}
-            {/*  News*/}
-            {/*</button>*/}
+            <button
+              onClick={() => handleNavClick("news")}
+              className={getNavItemClass("news")}
+            >
+              News
+            </button>
 
             {/* Join Us Nav Item with separate dropdown toggle */}
             <div className="relative inline-flex items-center space-x-1">
