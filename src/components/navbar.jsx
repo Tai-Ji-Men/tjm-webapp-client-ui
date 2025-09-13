@@ -104,23 +104,24 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center justify-center space-x-4 xl:space-x-6 2xl:space-x-8 flex-1 px-4">
             <button
-              onClick={() => handleNavClick("home")}
-              className={getNavItemClass("home")}
+                onClick={() => handleNavClick("home")}
+                className={getNavItemClass("home")}
             >
               Home
             </button>
             <button
-              onClick={() => handleNavClick("about")}
-              className={getNavItemClass("about")}
+                onClick={() => handleNavClick("about")}
+                className={getNavItemClass("about")}
             >
               About TJM
             </button>
             <button
-              onClick={() => handleNavClick("qigong-life")}
-              className={getNavItemClass("qigong-life")}
+                onClick={() => handleNavClick("qigong-life")}
+                className={getNavItemClass("qigong-life")}
             >
               Qigong & Life
             </button>
+
 
             {/*Hide two unfinished tabs for now. */}
 
@@ -132,8 +133,8 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
             {/*</button>*/}
 
             <button
-              onClick={() => handleNavClick("news")}
-              className={getNavItemClass("news")}
+                onClick={() => handleNavClick("news")}
+                className={getNavItemClass("news")}
             >
               News
             </button>
@@ -142,43 +143,44 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
             <div className="relative inline-flex items-center space-x-1">
               {/* Main link navigates to Join Us page */}
               <button
-                onClick={() => handleNavClick("join-us")}
-                className={getNavItemClass("join-us")}
+                  onClick={() => handleNavClick("join-us")}
+                  className={getNavItemClass("join-us")}
               >
                 Join Us
               </button>
 
               {/* Arrow icon toggles dropdown */}
               <button
-                onClick={toggleDropdown}
-                className={`cursor-pointer text-black hover:text-gray-600 transition-transform duration-200 h-full flex items-center ${isDropdownOpen ? 'rotate-180' : ''}`}
-                aria-label="Toggle Join Us submenu"
+                  onClick={toggleDropdown}
+                  className={`cursor-pointer text-black hover:text-gray-600 transition-transform duration-200 h-full flex items-center ${isDropdownOpen ? 'rotate-180' : ''}`}
+                  aria-label="Toggle Join Us submenu"
               >
                 <svg
-                  className="h-3 w-3"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                    className="h-3 w-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                 </svg>
               </button>
 
-               {/*Submenu */}
+              {/*Submenu */}
               {isDropdownOpen && (
-                <div className="absolute top-full right-0 mt-1 min-w-max z-10 bg-white shadow-lg border border-gray-200 rounded-md py-1">
-                  <ul role="menu" aria-label="Join Us submenu">
-                    <li>
-                      <button
-                        onClick={() => handleNavClick("join-us", "academySection")}
-                        role="menuitem"
-                        className={`block w-full text-left px-4 py-2 text-sm whitespace-nowrap ${currentPage === "academy" ? "text-[#FF725E]" : "text-gray-700 hover:text-[#FF725E]"}`}
-                      >
-                        Academy
-                      </button>
-                    </li>
-                  </ul>
-                </div>
+                  <div
+                      className="absolute top-full right-0 mt-1 min-w-max z-10 bg-white shadow-lg border border-gray-200 rounded-md py-1">
+                    <ul role="menu" aria-label="Join Us submenu">
+                      <li>
+                        <button
+                            onClick={() => handleNavClick("join-us", "academySection")}
+                            role="menuitem"
+                            className={`block w-full text-left px-4 py-2 text-sm whitespace-nowrap ${currentPage === "academy" ? "text-[#FF725E]" : "text-gray-700 hover:text-[#FF725E]"}`}
+                        >
+                          Academy
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
               )}
             </div>
           </div>

@@ -1,4 +1,5 @@
 const DOMAIN = 'https://tjm-usa-server.com';
+const LOCAL_DOMAIN = 'http://localhost:8080';
 const BASE = `${DOMAIN}/tjm/api/v1`;
 
 export async function getPageContent(pageId) {
@@ -37,3 +38,13 @@ export async function getTestimonials() {
   const { testimonials } = await res.json();
   return testimonials;
 }
+
+export async function getNewsDetailsBySlug(slug) {
+  const res = await fetch(`${BASE}/news/articles/${slug}`);
+  console.log(res);
+  if (!res.ok) {
+    throw new Error(`Failed to load news details for "${slug}"`);
+  }
+  return res.json();
+}
+

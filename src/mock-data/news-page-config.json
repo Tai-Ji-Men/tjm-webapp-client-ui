@@ -1,0 +1,195 @@
+{
+  "todaysPicks": {
+    "primary": {
+      "id": "68bb875580bb98a76c3fae81",
+      "slug": "kwehfkjwhef",
+      "title": "TEST 123 Celebrating UN-Declared International Day of Peace",
+      "image": "https://cdn.example.com/images/news1.jpg",
+      "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+    },
+    "secondary": [
+      {
+        "id": "68bb874b80bb98a76c3fae7f",
+        "slug": "kwehfkjwhef",
+        "title": "ABCFGWEWE",
+        "image": "https://cdn.example.com/images/news1.jpg",
+        "excerpt": "wlehfjnuwehfefffff"
+      },
+      {
+        "id": "68bb874b80bb98a76c3fae7f",
+        "slug": "kwehfkjwhef",
+        "title": "ABCFGWEWE",
+        "image": "https://cdn.example.com/images/news1.jpg",
+        "excerpt": "wlehfjnuwehfefffff"
+      }
+    ]
+  },
+  "mostRecent": [
+    {
+      "id": "68bb874b80bb98a76c3fae7f",
+      "slug": "kwehfkjwhef",
+      "title": "ABCFGWEWE",
+      "image": "https://cdn.example.com/images/news1.jpg",
+      "excerpt": "wlehfjnuwehfefffff"
+    },
+    {
+      "id": "68bb874b80bb98a76c3fae7f",
+      "slug": "kwehfkjwhef",
+      "title": "ABCFGWEWE",
+      "image": "https://cdn.example.com/images/news1.jpg",
+      "excerpt": "wlehfjnuwehfefffff"
+    },
+    {
+      "id": "68bb875b80bb98a76c3fae83",
+      "slug": "celebrating-un-declared-international-day-of-peace",
+      "title": "Celebrating UN-Declared International Day of Peace",
+      "image": "https://cdn.example.com/images/news1.jpg",
+      "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+    }
+  ],
+  "topics": [
+    {
+      "id": "FOWPAL Highlights A",
+      "title": "FOWPAL Highlights A",
+      "image": "https://cdn.example.com/topic-fowpal.jpg",
+      "items": [
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        }
+      ]
+    },
+
+    {
+      "id": "FOWPAL Highlights B",
+      "title": "FOWPAL Highlights B",
+      "image": "https://cdn.example.com/topic-fowpal.jpg",
+      "items": [
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        }
+      ]
+    },
+
+    {
+      "id": "FOWPAL Highlights C",
+      "title": "FOWPAL Highlights C",
+      "image": "https://cdn.example.com/topic-fowpal.jpg",
+      "items": [
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        }
+      ]
+    },
+
+    {
+      "id": "FOWPAL Highlights D",
+      "title": "FOWPAL Highlights D",
+      "image": "https://cdn.example.com/topic-fowpal.jpg",
+      "items": [
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        },
+        {
+          "id": "68bb875b80bb98a76c3fae83",
+          "slug": "celebrating-un-declared-international-day-of-peace",
+          "title": "Celebrating UN-Declared International Day of Peace",
+          "image": "https://cdn.example.com/images/news1.jpg",
+          "excerpt": "On the UN's International Day of Peace, Tai Ji Men rang the Bell of World Peace and Love in Times Square."
+        }
+      ]
+    }
+  ]
+}
