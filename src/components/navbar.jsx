@@ -233,6 +233,8 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
               >
                 Benefits of Practice
               </button>
+
+
               <button
                 onClick={() => handleNavClick("news")}
                 className={getMobileNavItemClass("news")}
@@ -242,11 +244,21 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
 
               {/* Join Us main page link */}
               <button
+                  onClick={() => handleNavClick("events")}
+                  className={getMobileNavItemClass("events")}
+              >
+                Events
+              </button>
+
+              {/* Join Us main page link */}
+              <button
                 onClick={() => handleNavClick("join-us")}
                 className={getMobileNavItemClass("join-us")}
               >
                 Join Us
               </button>
+
+
               {/* Mobile Join Us submenu - commented out
               <div className="px-3 py-2">
                 <div className="text-black font-medium mb-2">Join Us</div>
