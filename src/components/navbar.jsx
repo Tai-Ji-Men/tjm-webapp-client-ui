@@ -179,7 +179,7 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
                     <ul role="menu" aria-label="Join Us submenu">
                       <li>
                         <button
-                            onClick={() => handleNavClick("join-us", "academySection")}
+                            onClick={() => handleNavClick("join-us", "AcademySection")}
                             role="menuitem"
                             className={`block w-full text-left px-4 py-2 text-sm whitespace-nowrap ${currentPage === "academy" ? "text-[#FF725E]" : "text-gray-700 hover:text-[#FF725E]"}`}
                         >
