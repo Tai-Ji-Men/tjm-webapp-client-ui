@@ -139,6 +139,13 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
               News
             </button>
 
+            <button
+                onClick={() => handleNavClick("events")}
+                className={getNavItemClass("events")}
+            >
+              Events
+            </button>
+
             {/* Join Us Nav Item with separate dropdown toggle */}
             <div className="relative inline-flex items-center space-x-1">
               {/* Main link navigates to Join Us page */}
