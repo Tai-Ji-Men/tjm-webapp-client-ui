@@ -125,12 +125,12 @@ export default function Navbar({ currentPage, setCurrentPage, setSearchQuery, ha
 
             {/*Hide two unfinished tabs for now. */}
 
-            {/*<button*/}
-            {/*  onClick={() => handleNavClick("benefit-practice")}*/}
-            {/*  className={getNavItemClass("benefit-practice")}*/}
-            {/*>*/}
-            {/*  Benefits of Practice*/}
-            {/*</button>*/}
+            <button
+              onClick={() => handleNavClick("benefit-practice")}
+              className={getNavItemClass("benefit-practice")}
+            >
+              Benefits of Practice
+            </button>
 
             <button
                 onClick={() => handleNavClick("news")}
